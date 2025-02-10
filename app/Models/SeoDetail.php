@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
+use Database\Factories\SeoDetailFactory;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Firefly\FilamentBlog\Database\Factories\SeoDetailFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -66,7 +66,7 @@ class SeoDetail extends Model
         return $this->belongsTo(Post::class)->orderByDesc('id');
     }
 
-    public static function getForm()
+    public static function getForm(): array
     {
         return [
             Select::make('post_id')
@@ -92,13 +92,13 @@ class SeoDetail extends Model
         ];
     }
 
-    protected static function newFactory()
+    protected static function newFactory(): SeoDetailFactory
     {
         return new SeoDetailFactory();
     }
 
-    public function getTable()
+    public function getTable(): string
     {
-        return config('filamentblog.tables.prefix') . 'seo_details';
+        return table_name('seo_details');
     }
 }
