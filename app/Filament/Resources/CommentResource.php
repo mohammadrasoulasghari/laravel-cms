@@ -36,7 +36,6 @@ class CommentResource extends Resource
         return trans('comment.resource.plural_label');
     }
 
-
     public static function form(Form $form): Form
     {
         return $form
