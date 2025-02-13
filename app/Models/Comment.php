@@ -43,7 +43,7 @@ class Comment extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(config('filamentblog.user.model'), 'user_id');
+        return $this->belongsTo(cms_config('user.model'), 'user_id');
     }
 
     public function post(): BelongsTo
@@ -65,16 +65,20 @@ class Comment extends Model
     {
         return [
             Select::make('user_id')
+                ->label(trans('comment.fields.user'))
                 ->relationship('user', cms_config('user.columns.name'))
                 ->required(),
             Select::make('post_id')
+                ->label(trans('comment.fields.post'))
                 ->relationship('post', 'title')
                 ->required(),
             Textarea::make('comment')
+                ->label(trans('comment.fields.comment'))
                 ->required()
                 ->maxLength(65535)
                 ->columnSpanFull(),
-            Toggle::make('approved'),
+            Toggle::make('approved')
+                ->label(trans('comment.fields.approved')),
         ];
     }
 

@@ -33,6 +33,7 @@ class Category extends Model
     {
         return [
             TextInput::make('name')
+                ->label(trans('category.fields.name'))
                 ->live(true)
                 ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
 
@@ -43,6 +44,7 @@ class Category extends Model
                 ->maxLength(155),
 
             TextInput::make('slug')
+                ->label(trans('category.fields.slug'))
                 ->unique(cms_config('tables.prefix').'categories', 'slug', null, 'id')
                 ->readOnly()
                 ->maxLength(255),
