@@ -157,7 +157,7 @@ class Post extends Model
                                     Str::slug($state)
                                 ))
                                 ->required()
-                                ->unique(config('filamentblog.tables.prefix') . 'posts', 'title', null, 'id')
+                                ->unique(cms_config('posts'), 'title', null, 'id')
                                 ->maxLength(255),
 
                             TextInput::make('slug')
@@ -215,8 +215,8 @@ class Post extends Model
                                 ->minDate(now()->addMinutes(5))
                                 ->native(false),
                         ]),
-                    Select::make(config('filamentblog.user.foreign_key'))
-                        ->relationship('user', config('filamentblog.user.columns.name'))
+                    Select::make(cms_config('user.foreign_key'))
+                        ->relationship('user', cms_config('user.columns.name'))
                         ->nullable(false)
                         ->default(auth()->id()),
 

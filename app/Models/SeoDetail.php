@@ -70,22 +70,31 @@ class SeoDetail extends Model
     {
         return [
             Select::make('post_id')
+                ->label(trans('seo.fields.post'))
                 ->createOptionForm(Post::getForm())
                 ->editOptionForm(Post::getForm())
                 ->relationship('post', 'title')
-                ->unique(config('filamentblog.tables.prefix').'seo_details', 'post_id', null, 'id')
+                ->unique(
+                    table_name('seo_details'),
+                    'post_id',
+                    null,
+                    'id'
+                )
                 ->required()
                 ->preload()
                 ->searchable()
                 ->default(request('post_id') ?? '')
                 ->columnSpanFull(),
             TextInput::make('title')
+                ->label(trans('seo.fields.title'))
                 ->required()
                 ->maxLength(255)
                 ->columnSpanFull(),
             TagsInput::make('keywords')
+                ->label(trans('seo.fields.keywords'))
                 ->columnSpanFull(),
             Textarea::make('description')
+                ->label(trans('seo.fields.description'))
                 ->required()
                 ->maxLength(65535)
                 ->columnSpanFull(),
