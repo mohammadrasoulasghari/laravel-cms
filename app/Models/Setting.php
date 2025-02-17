@@ -54,24 +54,29 @@ class Setting extends Model
             Section::make('General Information')
                 ->schema([
                     TextInput::make('title')
+                        ->label(trans('setting.fields.title'))
                         ->maxLength(155)
                         ->required(),
                     TextInput::make('organization_name')
+                        ->label(trans('setting.fields.organization_name'))
                         ->required()
                         ->maxLength(155)
                         ->minLength(3),
                     Textarea::make('description')
+                        ->label(trans('setting.fields.description'))
                         ->required()
                         ->minLength(10)
                         ->maxLength(1000)
                         ->columnSpanFull(),
                     FileUpload::make('logo')
+                        ->label(trans('setting.fields.logo'))
                         ->hint('Max height 400')
                         ->directory('setting/logo')
                         ->maxSize(1024 * 1024 * 2)
                         ->rules('dimensions:max_height=400')
                         ->nullable()->columnSpanFull(),
                     FileUpload::make('favicon')
+                        ->label(trans('setting.fields.favicon'))
                         ->directory('setting/favicon')
                         ->maxSize(50 )
                         ->nullable()->columnSpanFull()
@@ -99,13 +104,14 @@ class Setting extends Model
                 ->description('Add your quick links here. This will be displayed in the footer of your blog.')
                 ->schema([
                     Repeater::make('quick_links')
-                        ->label('Links')
+                        ->label(trans('setting.fields.links'))
                         ->schema([
                             TextInput::make('label')
+                                ->label(trans('setting.fields.label'))
                                 ->required()
                                 ->maxLength(155),
                             TextInput::make('url')
-                                ->label('URL')
+                                ->label(trans('setting.fields.url'))
                                 ->helperText('URL should start with http:// or https://')
                                 ->required()
                                 ->url()
