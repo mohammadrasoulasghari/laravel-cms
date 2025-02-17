@@ -26,7 +26,7 @@ class Category extends Model
 
     public function posts(): BelongsToMany
     {
-        return $this->belongsToMany(Post::class, cms_config('tables.prefix').'category_'.cms_config('tables.prefix').'post');
+        return $this->belongsToMany(Post::class, table_name('category').'_'.table_name('post'));
     }
 
     public static function getForm(): array
@@ -39,13 +39,13 @@ class Category extends Model
 
                     $set('slug', Str::slug($state));
                 })
-                ->unique(cms_config('tables.prefix').'categories', 'name', null, 'id')
+                ->unique(table_name('categories'), 'name', null, 'id')
                 ->required()
                 ->maxLength(155),
 
             TextInput::make('slug')
                 ->label(trans('category.fields.slug'))
-                ->unique(cms_config('tables.prefix').'categories', 'slug', null, 'id')
+                ->unique(table_name('categories'), 'slug', null, 'id')
                 ->readOnly()
                 ->maxLength(255),
         ];
