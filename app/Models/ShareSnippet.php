@@ -37,11 +37,13 @@ class ShareSnippet extends Model
     {
         return [
             Textarea::make('script_code')
-                ->label('JS Script')
+                ->label(trans('share-snippet.fields.script_code'))
                 ->required(),
             Textarea::make('html_code')
+                ->label(trans('share-snippet.fields.html_code'))
                 ->required(),
-            Toggle::make('active'),
+            Toggle::make('active')
+                ->label(trans('share-snippet.fields.active')),
         ];
     }
 
