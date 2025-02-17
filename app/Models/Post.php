@@ -74,7 +74,7 @@ class Post extends Model
 
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, table_name('category') . '_' . table_name('tag'));
+        return $this->belongsToMany(Tag::class, table_name('post') . '_' . table_name('tag'));
     }
 
     public function user(): BelongsTo
@@ -139,10 +139,13 @@ class Post extends Model
     {
         return [
             Section::make('Blog Details')
+                ->label(trans('posts.form.blog_details'))
                 ->schema([
                     Fieldset::make('Titles')
+                        ->label(trans('posts.form.titles'))
                         ->schema([
                             Select::make('category_id')
+                                ->label(trans('posts.form.category'))
                                 ->multiple()
                                 ->preload()
                                 ->createOptionForm(Category::getForm())
@@ -151,6 +154,7 @@ class Post extends Model
                                 ->columnSpanFull(),
 
                             TextInput::make('title')
+                                ->label(trans('posts.form.title'))
                                 ->live(true)
                                 ->afterStateUpdated(fn(Set $set, ?string $state) => $set(
                                     'slug',
@@ -161,13 +165,16 @@ class Post extends Model
                                 ->maxLength(255),
 
                             TextInput::make('slug')
+                                ->label(trans('posts.form.slug'))
                                 ->maxLength(255),
 
                             Textarea::make('sub_title')
+                                ->label(trans('posts.form.sub_title'))
                                 ->maxLength(255)
                                 ->columnSpanFull(),
 
                             Select::make('tag_id')
+                                ->label(trans('posts.form.tags'))
                                 ->multiple()
                                 ->preload()
                                 ->createOptionForm(Tag::getForm())
@@ -176,15 +183,17 @@ class Post extends Model
                                 ->columnSpanFull(),
                         ]),
                     TiptapEditor::make('body')
+                        ->label(trans('posts.form.body'))
                         ->profile('default')
                         ->disableFloatingMenus()
                         ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
                         ->required()
                         ->columnSpanFull(),
                     Fieldset::make('Feature Image')
+                        ->label(trans('posts.form.feature_image'))
                         ->schema([
                             FileUpload::make('cover_photo_path')
-                                ->label('Cover Photo')
+                                ->label(trans('posts.form.cover_photo'))
                                 ->directory('/blog-feature-images')
                                 ->hint('This cover image is used in your blog post as a feature image. Recommended image size 1200 X 628')
                                 ->image()
@@ -193,19 +202,24 @@ class Post extends Model
                                 ->maxSize(1024 * 5)
                                 ->rules('dimensions:max_width=1920,max_height=1004')
                                 ->required(),
-                            TextInput::make('photo_alt_text')->required(),
+                            TextInput::make('photo_alt_text')
+                                ->label(trans('posts.form.photo_alt_text'))
+                                ->required(),
                         ])->columns(1),
 
                     Fieldset::make('Status')
+                        ->label(trans('posts.form.status'))
                         ->schema([
 
                             ToggleButtons::make('status')
+                                ->label(trans('posts.form.status'))
                                 ->live()
                                 ->inline()
                                 ->options(PostStatus::class)
                                 ->required(),
 
                             DateTimePicker::make('scheduled_for')
+                                ->label(trans('posts.form.scheduled_for'))
                                 ->visible(function ($get) {
                                     return $get('status') === PostStatus::SCHEDULED->value;
                                 })
@@ -216,6 +230,7 @@ class Post extends Model
                                 ->native(false),
                         ]),
                     Select::make(cms_config('user.foreign_key'))
+                        ->label(trans('posts.form.author'))
                         ->relationship('user', cms_config('user.columns.name'))
                         ->nullable(false)
                         ->default(auth()->id()),
