@@ -35,7 +35,9 @@ class Tag extends Model
     {
         return [
             TextInput::make('name')
-                ->live(true)->afterStateUpdated(fn(Set $set, ?string $state) => $set(
+                ->label(trans('tags.fields.name'))
+                ->live(true)
+                ->afterStateUpdated(fn(Set $set, ?string $state) => $set(
                     'slug',
                     Str::slug($state)
                 ))
@@ -44,6 +46,7 @@ class Tag extends Model
                 ->maxLength(50),
 
             TextInput::make('slug')
+                ->label(trans('tags.fields.slug'))
                 ->unique(cms_config('tags'), 'slug', null, 'id')
                 ->readOnly()
                 ->maxLength(155),
