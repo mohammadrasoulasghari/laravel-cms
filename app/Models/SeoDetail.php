@@ -103,7 +103,7 @@ class SeoDetail extends Model
 
     protected static function newFactory(): SeoDetailFactory
     {
-        return new SeoDetailFactory;
+        return new SeoDetailFactory();
     }
 
     public function getTable(): string

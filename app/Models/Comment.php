@@ -53,7 +53,7 @@ class Comment extends Model
 
     protected static function newFactory(): CommentFactory
     {
-        return new CommentFactory;
+        return new CommentFactory();
     }
 
     public function scopeApproved(Builder $query): Builder
