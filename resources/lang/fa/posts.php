@@ -48,6 +48,6 @@ return [
         'all' => 'همه',
         'published' => 'منتشر شده',
         'pending' => 'پیش نویس',
-        'scheduled' => 'در صف انتشار'
+        'scheduled' => 'در صف انتشار',
     ],
 ];

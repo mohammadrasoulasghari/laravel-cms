@@ -37,7 +37,7 @@ class ManaePostSeoDetail extends ManageRelatedRecords
 
     protected function canCreate(): bool
     {
-        return !$this->getRelationship()->count();
+        return ! $this->getRelationship()->count();
     }
 
     public function form(Form $form): Form

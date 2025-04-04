@@ -92,9 +92,9 @@ class NewsletterResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index'  => ListNewsletters::route('/'),
+            'index' => ListNewsletters::route('/'),
             'create' => CreateNewsletter::route('/create'),
-            'edit'   => EditNewsletter::route('/{record}/edit'),
+            'edit' => EditNewsletter::route('/{record}/edit'),
         ];
     }
 }

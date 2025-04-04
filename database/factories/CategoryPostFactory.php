@@ -22,7 +22,7 @@ class CategoryPostFactory extends Factory
     public function definition(): array
     {
         return [
-            'post_id' =>  Post::query()
+            'post_id' => Post::query()
                 ->inRandomOrder()
                 ->firstOrCreate()
                 ->id,

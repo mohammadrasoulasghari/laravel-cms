@@ -34,10 +34,10 @@ class Comment extends Model
      * @var array
      */
     protected $casts = [
-        'id'          => 'integer',
-        'user_id'     => 'integer',
-        'post_id'     => 'integer',
-        'approved'    => 'boolean',
+        'id' => 'integer',
+        'user_id' => 'integer',
+        'post_id' => 'integer',
+        'approved' => 'boolean',
         'approved_at' => 'datetime',
     ];
 
@@ -53,7 +53,7 @@ class Comment extends Model
 
     protected static function newFactory(): CommentFactory
     {
-        return new CommentFactory();
+        return new CommentFactory;
     }
 
     public function scopeApproved(Builder $query): Builder

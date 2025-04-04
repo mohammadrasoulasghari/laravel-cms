@@ -18,7 +18,7 @@ return [
             'label' => 'Posts',
             'title' => 'Title',
             'subtitle' => 'Subtitle',
-            'status' => 'Status'
-        ]
-    ]
+            'status' => 'Status',
+        ],
+    ],
 ];

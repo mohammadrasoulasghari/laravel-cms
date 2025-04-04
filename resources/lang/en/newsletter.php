@@ -9,11 +9,11 @@ return [
         'email' => 'Email',
         'subscribed' => 'Subscribed',
         'created_at' => 'Created At',
-        'updated_at' => 'Updated At'
+        'updated_at' => 'Updated At',
     ],
     'validation' => [
         'email' => [
             'unique' => 'This email has already been registered',
-        ]
-    ]
+        ],
+    ],
 ];

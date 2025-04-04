@@ -27,7 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->brandName("Laravel Cms")
+            ->brandName('Laravel Cms')
             ->login()
             ->font('Vazirmatn', provider: GoogleFontProvider::class)
             ->colors([

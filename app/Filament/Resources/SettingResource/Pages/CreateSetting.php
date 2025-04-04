@@ -9,8 +9,8 @@ class CreateSetting extends CreateRecord
 {
     protected static string $resource = SettingResource::class;
 
-//    protected function beforeCreate(): void
-//    {
-//        dd($this->data);
-//    }
+    //    protected function beforeCreate(): void
+    //    {
+    //        dd($this->data);
+    //    }
 }

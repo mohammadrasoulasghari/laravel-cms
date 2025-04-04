@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Factories;
+
 use App\Models\NewsLetter;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

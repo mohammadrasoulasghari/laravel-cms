@@ -9,7 +9,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
 
 class PostScheduleJob implements ShouldQueue
 {
@@ -17,7 +16,6 @@ class PostScheduleJob implements ShouldQueue
     use InteractsWithQueue;
     use Queueable;
     use SerializesModels;
-
 
     public function __construct(private Post $post)
     {
@@ -27,8 +25,8 @@ class PostScheduleJob implements ShouldQueue
     public function handle(): void
     {
         $this->post->update([
-            'status'        => PostStatus::PUBLISHED,
-            'published_at'  => now(),
+            'status' => PostStatus::PUBLISHED,
+            'published_at' => now(),
             'scheduled_for' => null,
         ]);
     }

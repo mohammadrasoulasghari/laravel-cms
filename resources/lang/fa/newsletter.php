@@ -9,11 +9,11 @@ return [
         'email' => 'ایمیل',
         'subscribed' => 'مشترک شده',
         'created_at' => 'تاریخ ایجاد',
-        'updated_at' => 'تاریخ بروزرسانی'
+        'updated_at' => 'تاریخ بروزرسانی',
     ],
     'validation' => [
         'email' => [
             'unique' => 'این ایمیل قبلاً ثبت شده است',
-        ]
-    ]
+        ],
+    ],
 ];

@@ -15,7 +15,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
-
 class CommentResource extends Resource
 {
     protected static ?string $model = Comment::class;
@@ -116,9 +115,9 @@ class CommentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index'  => ListComments::route('/'),
+            'index' => ListComments::route('/'),
             'create' => CreateComment::route('/create'),
-            'edit'   => EditComment::route('/{record}/edit'),
+            'edit' => EditComment::route('/{record}/edit'),
         ];
     }
 }

@@ -18,5 +18,5 @@ return [
     'messages' => [
         'single_record' => 'Only one record can exist',
         'cannot_delete' => 'Cannot delete this record',
-    ]
+    ],
 ];

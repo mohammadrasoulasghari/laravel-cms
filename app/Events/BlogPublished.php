@@ -10,7 +10,6 @@ class BlogPublished
     use Dispatchable;
     use SerializesModels;
 
-
     public mixed $post;
 
     public function __construct($post)

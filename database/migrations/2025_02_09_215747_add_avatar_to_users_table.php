@@ -14,7 +14,7 @@ return new class extends Migration
         $tableName = resolve(cms_config('user.model'))->getTable();
         $columnName = cms_config('user.columns.avatar');
 
-        if (!Schema::hasColumn($tableName, $columnName)) {
+        if (! Schema::hasColumn($tableName, $columnName)) {
             Schema::table($tableName, function (Blueprint $table) use ($columnName) {
                 $table->string($columnName)->nullable();
             });

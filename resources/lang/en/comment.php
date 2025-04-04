@@ -13,12 +13,12 @@ return [
         'approved' => 'Approved',
         'approved_at' => 'Approval Date',
         'created_at' => 'Created At',
-        'updated_at' => 'Updated At'
+        'updated_at' => 'Updated At',
     ],
     'messages' => [
         'not_approved' => 'Not approved yet',
     ],
     'filters' => [
-        'user' => 'Filter by User'
-    ]
+        'user' => 'Filter by User',
+    ],
 ];

@@ -26,7 +26,7 @@ class Category extends Model
 
     public function posts(): BelongsToMany
     {
-        return $this->belongsToMany(Post::class, table_name('category') . '_' . table_name('post'));
+        return $this->belongsToMany(Post::class, table_name('category').'_'.table_name('post'));
     }
 
     public static function getForm(): array
@@ -52,7 +52,7 @@ class Category extends Model
 
     protected static function newFactory(): CategoryFactory
     {
-        return new CategoryFactory();
+        return new CategoryFactory;
     }
 
     public function getTable(): string

@@ -55,9 +55,9 @@ class SeoDetail extends Model
     ];
 
     protected $casts = [
-        'id'       => 'integer',
-        'post_id'  => 'integer',
-        'user_id'  => 'integer',
+        'id' => 'integer',
+        'post_id' => 'integer',
+        'user_id' => 'integer',
         'keywords' => 'json',
     ];
 
@@ -103,7 +103,7 @@ class SeoDetail extends Model
 
     protected static function newFactory(): SeoDetailFactory
     {
-        return new SeoDetailFactory();
+        return new SeoDetailFactory;
     }
 
     public function getTable(): string

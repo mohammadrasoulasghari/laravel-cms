@@ -25,7 +25,7 @@ class ShareSnippet extends Model
 
     protected $casts = [
         'script_code' => 'string',
-        'html_code'   => 'string',
+        'html_code' => 'string',
     ];
 
     public function scopeActive(Builder $query)
@@ -49,6 +49,6 @@ class ShareSnippet extends Model
 
     protected static function newFactory(): ShareSnippetFactory
     {
-        return new ShareSnippetFactory();
+        return new ShareSnippetFactory;
     }
 }

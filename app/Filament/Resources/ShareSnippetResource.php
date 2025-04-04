@@ -33,7 +33,7 @@ class ShareSnippetResource extends Resource
 
     public static function canCreate(): bool
     {
-        return !(self::$model::all()->count() > 0);
+        return ! (self::$model::all()->count() > 0);
 
     }
 
@@ -87,7 +87,7 @@ class ShareSnippetResource extends Resource
     {
         return [
             'index' => ListShareSnippets::route('/'),
-            'edit'  => EditShareSnippet::route('/{record}/edit'),
+            'edit' => EditShareSnippet::route('/{record}/edit'),
         ];
     }
 }
