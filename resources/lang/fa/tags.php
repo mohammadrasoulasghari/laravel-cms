@@ -2,12 +2,12 @@
 
 return [
     'resource' => [
-        'name'             => 'تگ',
+        'name' => 'تگ',
         'navigation_group' => 'تگ ها',
     ],
     'fields' => [
-        'name'       => 'نام',
-        'slug'       => 'اسلاگ',
+        'name' => 'نام',
+        'slug' => 'اسلاگ',
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',
     ],

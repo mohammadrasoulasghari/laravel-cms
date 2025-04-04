@@ -26,7 +26,7 @@ class NewsLetter extends Model
      * @var array
      */
     protected $casts = [
-        'id'     => 'integer',
+        'id' => 'integer',
         'active' => 'boolean',
     ];
 

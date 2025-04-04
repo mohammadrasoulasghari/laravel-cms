@@ -24,23 +24,23 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'            => $title = $this->faker->sentence(4),
-            'slug'             => Str::slug($title),
-            'sub_title'        => $this->faker->word(),
-            'body'             => $this->faker->text(),
-            'status'           => PostStatus::PENDING,
-            'published_at'     => $this->faker->dateTime(),
-            'scheduled_for'    => $this->faker->dateTime(),
+            'title' => $title = $this->faker->sentence(4),
+            'slug' => Str::slug($title),
+            'sub_title' => $this->faker->word(),
+            'body' => $this->faker->text(),
+            'status' => PostStatus::PENDING,
+            'published_at' => $this->faker->dateTime(),
+            'scheduled_for' => $this->faker->dateTime(),
             'cover_photo_path' => $this->faker->imageUrl(),
-            'photo_alt_text'   => $this->faker->word,
-            'user_id'          => User::factory(),
+            'photo_alt_text' => $this->faker->word,
+            'user_id' => User::factory(),
         ];
     }
 
     public function published(?Carbon $date = null): PostFactory
     {
         return $this->state(fn ($attribute) => [
-            'status'       => PostStatus::PUBLISHED,
+            'status' => PostStatus::PUBLISHED,
             'published_at' => $date ?? Carbon::now(),
         ]);
     }
@@ -55,7 +55,7 @@ class PostFactory extends Factory
     public function scheduled(?Carbon $date = null): PostFactory
     {
         return $this->state(fn ($attribute) => [
-            'status'        => PostStatus::SCHEDULED,
+            'status' => PostStatus::SCHEDULED,
             'scheduled_for' => $date ?? Carbon::now(),
         ]);
     }

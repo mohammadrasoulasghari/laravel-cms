@@ -50,11 +50,11 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
-        'id'            => 'integer',
-        'published_at'  => 'datetime',
+        'id' => 'integer',
+        'published_at' => 'datetime',
         'scheduled_for' => 'datetime',
-        'status'        => PostStatus::class,
-        'user_id'       => 'integer',
+        'status' => PostStatus::class,
+        'user_id' => 'integer',
     ];
 
     protected static function newFactory(): PostFactory
