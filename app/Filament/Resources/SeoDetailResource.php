@@ -67,7 +67,6 @@ class SeoDetailResource extends Resource
             ])
             ->defaultSort('id', 'desc')
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -82,7 +81,6 @@ class SeoDetailResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 

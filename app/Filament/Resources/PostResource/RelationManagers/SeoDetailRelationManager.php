@@ -32,7 +32,6 @@ class SeoDetailRelationManager extends RelationManager
                     ->label(trans('seo.fields.keywords')),
             ])
             ->filters([
-                //
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

@@ -49,7 +49,6 @@ class PostsRelationManager extends RelationManager
                     }),
             ])
             ->filters([
-                //
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

@@ -70,7 +70,6 @@ class NewsletterResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -85,7 +84,6 @@ class NewsletterResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 
