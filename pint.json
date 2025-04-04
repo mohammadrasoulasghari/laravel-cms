@@ -11,8 +11,8 @@
     },
     "blank_line_after_namespace": true,
     "blank_line_after_opening_tag": true,
-    "blank_line_before_statement": {
-      "statements": ["return"]
+    "class_definition": {
+      "space_before_parenthesis": true
     },
     "concat_space": {
       "spacing": "none"
@@ -25,7 +25,13 @@
       "tokens": [
         "extra",
         "throw",
-        "use"
+        "use",
+        "curly_brace_block",
+        "parenthesis_brace_block",
+        "return",
+        "square_brace_block",
+        "case",
+        "default"
       ]
     },
     "no_spaces_around_offset": true,
@@ -34,6 +40,18 @@
     "ordered_imports": {
       "sort_algorithm": "alpha"
     },
-    "single_trait_insert_per_statement": true
+    "single_trait_insert_per_statement": true,
+    "new_with_braces": true,
+    "no_empty_comment": true,
+    "no_trailing_whitespace": true,
+    "no_whitespace_in_blank_line": true,
+    "single_blank_line_at_eof": true,
+    "blank_line_before_statement": {
+      "statements": ["return", "try", "throw"]
+    },
+    "function_declaration": {
+      "closure_function_spacing": "one"
+    },
+    "single_line_empty_body": true
   }
 }
