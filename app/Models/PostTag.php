@@ -33,7 +33,7 @@ class PostTag extends Model
 
     protected static function newFactory(): PostTagFactory
     {
-        return new PostTagFactory;
+        return new PostTagFactory();
     }
 
     public function getTable(): string

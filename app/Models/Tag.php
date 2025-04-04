@@ -55,7 +55,7 @@ class Tag extends Model
 
     protected static function newFactory(): TagFactory
     {
-        return new TagFactory;
+        return new TagFactory();
     }
 
     public function getTable(): string

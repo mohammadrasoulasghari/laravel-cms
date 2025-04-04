@@ -36,7 +36,6 @@ class Category extends Model
                 ->label(trans('category.fields.name'))
                 ->live(true)
                 ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
-
                     $set('slug', Str::slug($state));
                 })
                 ->unique(table_name('categories'), 'name', null, 'id')
@@ -53,7 +52,7 @@ class Category extends Model
 
     protected static function newFactory(): CategoryFactory
     {
-        return new CategoryFactory;
+        return new CategoryFactory();
     }
 
     public function getTable(): string

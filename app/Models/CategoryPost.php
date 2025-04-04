@@ -33,7 +33,7 @@ class CategoryPost extends Model
 
     protected static function newFactory(): CategoryPostFactory
     {
-        return new CategoryPostFactory;
+        return new CategoryPostFactory();
     }
 
     public function getTable(): string

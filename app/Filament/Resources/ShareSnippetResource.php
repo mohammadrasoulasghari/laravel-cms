@@ -34,7 +34,6 @@ class ShareSnippetResource extends Resource
     public static function canCreate(): bool
     {
         return !(self::$model::all()->count() > 0);
-
     }
 
     public static function canDelete($record): bool

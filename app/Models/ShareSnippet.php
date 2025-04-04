@@ -49,6 +49,6 @@ class ShareSnippet extends Model
 
     protected static function newFactory(): ShareSnippetFactory
     {
-        return new ShareSnippetFactory;
+        return new ShareSnippetFactory();
     }
 }

@@ -22,7 +22,6 @@ class ManaePostSeoDetail extends ManageRelatedRecords
 
     public function getTitle(): string|Htmlable
     {
-
         $recordTitle = $this->getRecordTitle();
 
         $recordTitle = $recordTitle instanceof Htmlable ? $recordTitle->toHtml() : $recordTitle;

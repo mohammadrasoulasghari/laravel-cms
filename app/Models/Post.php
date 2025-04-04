@@ -59,7 +59,7 @@ class Post extends Model
 
     protected static function newFactory(): PostFactory
     {
-        return new PostFactory;
+        return new PostFactory();
     }
 
     public function categories(): BelongsToMany
