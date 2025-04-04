@@ -26,8 +26,8 @@ class CategoryPost extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'post_id' => 'integer',
+        'id'          => 'integer',
+        'post_id'     => 'integer',
         'category_id' => 'integer',
     ];
 

@@ -34,10 +34,10 @@ class Comment extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'user_id' => 'integer',
-        'post_id' => 'integer',
-        'approved' => 'boolean',
+        'id'          => 'integer',
+        'user_id'     => 'integer',
+        'post_id'     => 'integer',
+        'approved'    => 'boolean',
         'approved_at' => 'datetime',
     ];
 

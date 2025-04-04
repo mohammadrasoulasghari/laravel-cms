@@ -2,18 +2,18 @@
 
 return [
     'resource' => [
-        'label' => 'نظر',
+        'label'        => 'نظر',
         'plural_label' => 'نظرات',
     ],
     'fields' => [
-        'user' => 'کاربر',
-        'post' => 'مقاله',
-        'comment' => 'نظر',
-        'user-name' => 'نام کاربر',
-        'approved' => 'تایید شده',
+        'user'        => 'کاربر',
+        'post'        => 'مقاله',
+        'comment'     => 'نظر',
+        'user-name'   => 'نام کاربر',
+        'approved'    => 'تایید شده',
         'approved_at' => 'تاریخ تایید',
-        'created_at' => 'تاریخ ایجاد',
-        'updated_at' => 'تاریخ بروزرسانی',
+        'created_at'  => 'تاریخ ایجاد',
+        'updated_at'  => 'تاریخ بروزرسانی',
     ],
     'messages' => [
         'not_approved' => 'هنوز تایید نشده',

@@ -22,26 +22,26 @@ class SettingFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph,
-            'logo' => $this->faker->imageUrl(),
-            'favicon' => $this->faker->imageUrl(),
-            'organization_name' => $this->faker->company,
-            'google_console_code' => '<meat/>',
+            'title'                => $this->faker->sentence,
+            'description'          => $this->faker->paragraph,
+            'logo'                 => $this->faker->imageUrl(),
+            'favicon'              => $this->faker->imageUrl(),
+            'organization_name'    => $this->faker->company,
+            'google_console_code'  => '<meat/>',
             'google_analytic_code' => '<script></script>',
-            'google_adsense_code' => '<script></script>',
-            'quick_links' => [
+            'google_adsense_code'  => '<script></script>',
+            'quick_links'          => [
                 [
                     'label' => 'Home',
-                    'url' => $this->faker->url,
+                    'url'   => $this->faker->url,
                 ],
                 [
                     'label' => 'About',
-                    'url' => $this->faker->url,
+                    'url'   => $this->faker->url,
                 ],
                 [
                     'label' => 'Contact',
-                    'url' => $this->faker->url,
+                    'url'   => $this->faker->url,
                 ],
             ],
         ];

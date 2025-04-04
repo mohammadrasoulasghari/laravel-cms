@@ -7,7 +7,7 @@ return [
         'prefix' => 'laravelcms_',
     ],
     'route' => [
-        'prefix' => 'blogs',
+        'prefix'     => 'blogs',
         'middleware' => ['web'],
         //        'home' => [
         //            'name' => 'filamentblog.home',
@@ -18,24 +18,24 @@ return [
         ],
     ],
     'user' => [
-        'model' => User::class,
+        'model'       => User::class,
         'foreign_key' => 'user_id',
-        'columns' => [
-            'name' => 'name',
+        'columns'     => [
+            'name'   => 'name',
             'avatar' => 'profile_photo_path',
         ],
     ],
     'seo' => [
         'meta' => [
-            'title' => 'Filament Blog',
+            'title'       => 'Filament Blog',
             'description' => 'This is filament blog seo meta description',
-            'keywords' => [],
+            'keywords'    => [],
         ],
     ],
 
     'recaptcha' => [
-        'enabled' => false, // true or false
-        'site_key' => env('RECAPTCHA_SITE_KEY'),
+        'enabled'    => false, // true or false
+        'site_key'   => env('RECAPTCHA_SITE_KEY'),
         'secret_key' => env('RECAPTCHA_SECRET_KEY'),
     ],
 ];
