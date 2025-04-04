@@ -84,7 +84,7 @@ class ShareSnippetResource extends Resource
     {
         return [
             'index' => ListShareSnippets::route('/'),
-            'edit' => EditShareSnippet::route('/{record}/edit'),
+            'edit'  => EditShareSnippet::route('/{record}/edit'),
         ];
     }
 }

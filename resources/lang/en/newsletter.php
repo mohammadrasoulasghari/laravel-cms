@@ -2,11 +2,11 @@
 
 return [
     'resource' => [
-        'label' => 'Newsletter',
+        'label'        => 'Newsletter',
         'plural_label' => 'Newsletters',
     ],
     'fields' => [
-        'email' => 'Email',
+        'email'      => 'Email',
         'subscribed' => 'Subscribed',
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',

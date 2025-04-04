@@ -30,7 +30,7 @@ class CommentFactory extends Factory
                 ->inRandomOrder()
                 ->firstOrCreate()
                 ->id,
-            'comment' => $this->faker->word,
+            'comment'  => $this->faker->word,
             'approved' => false,
         ];
     }

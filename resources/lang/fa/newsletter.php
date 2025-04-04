@@ -2,11 +2,11 @@
 
 return [
     'resource' => [
-        'label' => 'خبرنامه',
+        'label'        => 'خبرنامه',
         'plural_label' => 'خبرنامه‌ها',
     ],
     'fields' => [
-        'email' => 'ایمیل',
+        'email'      => 'ایمیل',
         'subscribed' => 'مشترک شده',
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',

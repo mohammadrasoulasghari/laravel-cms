@@ -29,8 +29,8 @@ class Setting extends Model
 
     protected $casts = [
         'quick_links' => 'json',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
+        'created_at'  => 'datetime',
+        'updated_at'  => 'datetime',
     ];
 
     protected function getLogoImageAttribute(): string
