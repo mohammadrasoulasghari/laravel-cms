@@ -29,8 +29,8 @@ class Setting extends Model
 
     protected $casts = [
         'quick_links' => 'json',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
+        'created_at'  => 'datetime',
+        'updated_at'  => 'datetime',
     ];
 
     protected function getLogoImageAttribute(): string
@@ -78,7 +78,7 @@ class Setting extends Model
                     FileUpload::make('favicon')
                         ->label(trans('setting.fields.favicon'))
                         ->directory('setting/favicon')
-                        ->maxSize(50 )
+                        ->maxSize(50)
                         ->nullable()->columnSpanFull()
                 ])->columns(2),
 

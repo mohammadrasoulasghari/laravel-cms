@@ -7,7 +7,9 @@ use Illuminate\Queue\SerializesModels;
 
 class BlogPublished
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
+    use SerializesModels;
+
 
     public mixed $post;
 

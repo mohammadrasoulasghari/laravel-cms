@@ -26,7 +26,7 @@ class Category extends Model
 
     public function posts(): BelongsToMany
     {
-        return $this->belongsToMany(Post::class, table_name('category').'_'.table_name('post'));
+        return $this->belongsToMany(Post::class, table_name('category') . '_' . table_name('post'));
     }
 
     public static function getForm(): array
@@ -36,7 +36,6 @@ class Category extends Model
                 ->label(trans('category.fields.name'))
                 ->live(true)
                 ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
-
                     $set('slug', Str::slug($state));
                 })
                 ->unique(table_name('categories'), 'name', null, 'id')

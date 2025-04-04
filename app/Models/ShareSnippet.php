@@ -25,7 +25,7 @@ class ShareSnippet extends Model
 
     protected $casts = [
         'script_code' => 'string',
-        'html_code' => 'string',
+        'html_code'   => 'string',
     ];
 
     public function scopeActive(Builder $query)

@@ -28,11 +28,12 @@ class ShareSnippetResource extends Resource
     {
         return trans('share-snippet.resource.plural_label');
     }
+
     protected static ?int $navigationSort = 7;
 
     public static function canCreate(): bool
     {
-        return ! (self::$model::all()->count() > 0);
+        return !(self::$model::all()->count() > 0);
 
     }
 
@@ -86,7 +87,7 @@ class ShareSnippetResource extends Resource
     {
         return [
             'index' => ListShareSnippets::route('/'),
-            'edit' => EditShareSnippet::route('/{record}/edit'),
+            'edit'  => EditShareSnippet::route('/{record}/edit'),
         ];
     }
 }

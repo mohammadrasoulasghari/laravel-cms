@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Log;
 
 class PostScheduleJob implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
+
 
     public function __construct(private Post $post)
     {
@@ -22,12 +26,10 @@ class PostScheduleJob implements ShouldQueue
 
     public function handle(): void
     {
-        Log::info('PostScheduleJob Started');
         $this->post->update([
-            'status' => PostStatus::PUBLISHED,
-            'published_at' => now(),
+            'status'        => PostStatus::PUBLISHED,
+            'published_at'  => now(),
             'scheduled_for' => null,
         ]);
-        Log::info('PostScheduleJob Ended');
     }
 }

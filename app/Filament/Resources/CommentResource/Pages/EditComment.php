@@ -16,5 +16,4 @@ class EditComment extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-
 }

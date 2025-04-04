@@ -27,7 +27,7 @@ class Tag extends Model
     {
         return $this->belongsToMany(
             Post::class,
-            table_name('post').'_'.table_name('tag')
+            table_name('post') . '_' . table_name('tag')
         );
     }
 

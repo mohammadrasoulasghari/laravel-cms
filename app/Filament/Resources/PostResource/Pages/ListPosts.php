@@ -29,14 +29,14 @@ class ListPosts extends ListRecords
     public function getTabs(): array
     {
         return [
-            'all' => Tab::make('All')
-            ->label(trans('posts.stats.all')),
+            'all'       => Tab::make('All')
+                ->label(trans('posts.stats.all')),
             'published' => Tab::make('Published')
                 ->label(trans('posts.stats.published'))
                 ->modifyQueryUsing(function ($query) {
                     $query->published();
                 })->icon('heroicon-o-check-badge'),
-            'pending' => Tab::make('Pending')
+            'pending'   => Tab::make('Pending')
                 ->label(trans('posts.stats.pending'))
                 ->modifyQueryUsing(function ($query) {
                     $query->pending();
