@@ -50,11 +50,11 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'published_at' => 'datetime',
+        'id'            => 'integer',
+        'published_at'  => 'datetime',
         'scheduled_for' => 'datetime',
-        'status' => PostStatus::class,
-        'user_id' => 'integer',
+        'status'        => PostStatus::class,
+        'user_id'       => 'integer',
     ];
 
     protected static function newFactory(): PostFactory
@@ -64,7 +64,7 @@ class Post extends Model
 
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Category::class, table_name('category') . '_' . table_name('post'));
+        return $this->belongsToMany(Category::class, table_name('category').'_'.table_name('post'));
     }
 
     public function comments(): hasmany
@@ -74,7 +74,7 @@ class Post extends Model
 
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, table_name('post') . '_' . table_name('tag'));
+        return $this->belongsToMany(Tag::class, table_name('post').'_'.table_name('tag'));
     }
 
     public function user(): BelongsTo
@@ -125,14 +125,14 @@ class Post extends Model
     public function relatedPosts($take = 3)
     {
         return $this->whereHas('categories', function ($query) {
-            $query->whereIn(table_name('categories') . '.id', $this->categories->pluck('id'))
-                ->whereNotIn(table_name('posts') . '.id', [$this->id]);
+            $query->whereIn(table_name('categories').'.id', $this->categories->pluck('id'))
+                ->whereNotIn(table_name('posts').'.id', [$this->id]);
         })->published()->with('user')->take($take)->get();
     }
 
     protected function getFeaturePhotoAttribute(): string
     {
-        return asset('storage/' . $this->cover_photo_path);
+        return asset('storage/'.$this->cover_photo_path);
     }
 
     public static function getForm(): array
@@ -156,7 +156,7 @@ class Post extends Model
                             TextInput::make('title')
                                 ->label(trans('posts.form.title'))
                                 ->live(true)
-                                ->afterStateUpdated(fn(Set $set, ?string $state) => $set(
+                                ->afterStateUpdated(fn (Set $set, ?string $state) => $set(
                                     'slug',
                                     Str::slug($state)
                                 ))

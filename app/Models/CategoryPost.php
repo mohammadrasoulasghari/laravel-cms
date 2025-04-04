@@ -26,8 +26,8 @@ class CategoryPost extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'post_id' => 'integer',
+        'id'          => 'integer',
+        'post_id'     => 'integer',
         'category_id' => 'integer',
     ];
 
@@ -38,6 +38,6 @@ class CategoryPost extends Model
 
     public function getTable(): string
     {
-        return table_name('category') . '_' . table_name('post');
+        return table_name('category').'_'.table_name('post');
     }
 }

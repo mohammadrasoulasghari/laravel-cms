@@ -30,7 +30,7 @@ class ListPosts extends ListRecords
     {
         return [
             'all' => Tab::make('All')
-            ->label(trans('posts.stats.all')),
+                ->label(trans('posts.stats.all')),
             'published' => Tab::make('Published')
                 ->label(trans('posts.stats.published'))
                 ->modifyQueryUsing(function ($query) {

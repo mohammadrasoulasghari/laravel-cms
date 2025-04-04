@@ -37,7 +37,7 @@ class Tag extends Model
             TextInput::make('name')
                 ->label(trans('tags.fields.name'))
                 ->live(true)
-                ->afterStateUpdated(fn(Set $set, ?string $state) => $set(
+                ->afterStateUpdated(fn (Set $set, ?string $state) => $set(
                     'slug',
                     Str::slug($state)
                 ))

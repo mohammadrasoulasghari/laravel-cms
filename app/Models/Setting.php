@@ -29,18 +29,18 @@ class Setting extends Model
 
     protected $casts = [
         'quick_links' => 'json',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
+        'created_at'  => 'datetime',
+        'updated_at'  => 'datetime',
     ];
 
     protected function getLogoImageAttribute(): string
     {
-        return asset('storage/' . $this->logo);
+        return asset('storage/'.$this->logo);
     }
 
     protected function getFavIconImageAttribute(): string
     {
-        return asset('storage/' . $this->favicon);
+        return asset('storage/'.$this->favicon);
     }
 
     protected static function newFactory(): SettingFactory
@@ -78,8 +78,8 @@ class Setting extends Model
                     FileUpload::make('favicon')
                         ->label(trans('setting.fields.favicon'))
                         ->directory('setting/favicon')
-                        ->maxSize(50 )
-                        ->nullable()->columnSpanFull()
+                        ->maxSize(50)
+                        ->nullable()->columnSpanFull(),
                 ])->columns(2),
 
             Section::make('SEO')

@@ -26,9 +26,9 @@ class PostTag extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'      => 'integer',
         'post_id' => 'integer',
-        'tag_id' => 'integer',
+        'tag_id'  => 'integer',
     ];
 
     protected static function newFactory(): PostTagFactory
@@ -38,6 +38,6 @@ class PostTag extends Model
 
     public function getTable(): string
     {
-        return table_name('post') . '_' . table_name('tag');
+        return table_name('post').'_'.table_name('tag');
     }
 }

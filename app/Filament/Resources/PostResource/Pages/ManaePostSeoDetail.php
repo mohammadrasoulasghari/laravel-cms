@@ -22,7 +22,6 @@ class ManaePostSeoDetail extends ManageRelatedRecords
 
     public function getTitle(): string|Htmlable
     {
-
         $recordTitle = $this->getRecordTitle();
 
         $recordTitle = $recordTitle instanceof Htmlable ? $recordTitle->toHtml() : $recordTitle;
@@ -37,7 +36,7 @@ class ManaePostSeoDetail extends ManageRelatedRecords
 
     protected function canCreate(): bool
     {
-        return ! $this->getRelationship()->count();
+        return !$this->getRelationship()->count();
     }
 
     public function form(Form $form): Form
