@@ -15,8 +15,8 @@ class ShareSnippetFactory extends Factory
     {
         return [
             'script_code' => 'Please paste your script here.',
-            'html_code'   => 'Please paste your html here.',
-            'active'      => false,
+            'html_code' => 'Please paste your html here.',
+            'active' => false,
         ];
     }
 }
