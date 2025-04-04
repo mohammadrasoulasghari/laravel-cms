@@ -98,9 +98,9 @@ class SettingResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListSettings::route('/'),
+            'index'  => ListSettings::route('/'),
             'create' => CreateSetting::route('/create'),
-            'edit' => EditSetting::route('/{record}/edit'),
+            'edit'   => EditSetting::route('/{record}/edit'),
         ];
     }
 }

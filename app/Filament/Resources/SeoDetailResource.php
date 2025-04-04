@@ -89,9 +89,9 @@ class SeoDetailResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListSeoDetails::route('/'),
+            'index'  => ListSeoDetails::route('/'),
             'create' => CreateSeoDetail::route('/create'),
-            'edit' => EditSeoDetail::route('/{record}/edit'),
+            'edit'   => EditSeoDetail::route('/{record}/edit'),
         ];
     }
 }

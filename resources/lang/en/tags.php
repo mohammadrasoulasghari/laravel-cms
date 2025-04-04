@@ -2,12 +2,12 @@
 
 return [
     'resource' => [
-        'name' => 'Tag',
+        'name'             => 'Tag',
         'navigation_group' => 'Blog',
     ],
     'fields' => [
-        'name' => 'Name',
-        'slug' => 'Slug',
+        'name'       => 'Name',
+        'slug'       => 'Slug',
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',
     ],

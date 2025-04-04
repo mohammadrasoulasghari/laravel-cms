@@ -26,7 +26,7 @@ class NewsLetter extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'     => 'integer',
         'active' => 'boolean',
     ];
 
@@ -37,7 +37,7 @@ class NewsLetter extends Model
 
     protected static function newFactory(): NewsLetterFactory
     {
-        return new NewsLetterFactory();
+        return new NewsLetterFactory;
     }
 
     public function getTable(): string

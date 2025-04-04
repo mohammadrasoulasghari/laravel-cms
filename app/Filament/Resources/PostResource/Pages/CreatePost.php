@@ -22,7 +22,7 @@ class CreatePost extends CreateRecord
     {
         if ($this->record->isScheduled()) {
 
-            $now = Carbon::now();
+            $now          = Carbon::now();
             $scheduledFor = Carbon::parse($this->record->scheduled_for);
             PostScheduleJob::dispatch($this->record)
                 ->delay($now->diffInSeconds($scheduledFor));

@@ -12,6 +12,7 @@ class ListShareSnippets extends ListRecords
     protected static string $resource = ShareSnippetResource::class;
 
     protected ?string $subheading = 'لطفاً برای دریافت کد اسکریپت و کد HTML مربوط به اسنیپت‌های اشتراک‌گذاری به آدرس https://platform.sharethis.com مراجعه نمایید';
+
     protected function getHeaderActions(): array
     {
         return [

@@ -83,8 +83,7 @@ class PostResource extends Resource
                         return $state->getColor();
                     }),
                 Tables\Columns\ImageColumn::make('cover_photo_path')
-                    ->label(trans('posts.table.cover_photo'))
-                ,
+                    ->label(trans('posts.table.cover_photo')),
 
                 UserPhotoName::make('user')
                     ->label(trans('posts.table.author'))
@@ -129,11 +128,11 @@ class PostResource extends Resource
                     Fieldset::make('General')
                         ->schema([
                             TextEntry::make('title')
-                            ->label(trans('posts.form.title')),
+                                ->label(trans('posts.form.title')),
                             TextEntry::make('slug')
-                            ->label(trans('posts.form.slug')),
+                                ->label(trans('posts.form.slug')),
                             TextEntry::make('sub_title')
-                            ->label(trans('posts.form.sub_title')),
+                                ->label(trans('posts.form.sub_title')),
                         ]),
                     Fieldset::make('Publish Information')
                         ->label(trans('posts.sections.publish_information'))
@@ -146,14 +145,14 @@ class PostResource extends Resource
                             TextEntry::make('published_at')
                                 ->label(trans('posts.sections.scheduled_time'))
                                 ->visible(function (Post $record) {
-                                return $record->status === PostStatus::PUBLISHED;
-                            }),
+                                    return $record->status === PostStatus::PUBLISHED;
+                                }),
 
                             TextEntry::make('scheduled_for')
                                 ->label(trans('posts.sections.scheduled_for'))
                                 ->visible(function (Post $record) {
-                                return $record->status === PostStatus::SCHEDULED;
-                            }),
+                                    return $record->status === PostStatus::SCHEDULED;
+                                }),
                         ]),
                     Fieldset::make('Description')
                         ->schema([
@@ -193,11 +192,11 @@ class PostResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListPosts::route('/'),
-            'create' => CreatePost::route('/create'),
-            'edit' => EditPost::route('/{record}/edit'),
-            'view' => ViewPost::route('/{record}'),
-            'comments' => ManagePostComments::route('/{record}/comments'),
+            'index'     => ListPosts::route('/'),
+            'create'    => CreatePost::route('/create'),
+            'edit'      => EditPost::route('/{record}/edit'),
+            'view'      => ViewPost::route('/{record}'),
+            'comments'  => ManagePostComments::route('/{record}/comments'),
             'seoDetail' => ManaePostSeoDetail::route('/{record}/seo-details'),
         ];
     }

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $tableName = resolve(cms_config('user.model'))->getTable();
+        $tableName  = resolve(cms_config('user.model'))->getTable();
         $columnName = cms_config('user.columns.avatar');
 
         if (!Schema::hasColumn($tableName, $columnName)) {
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        $tableName = resolve(cms_config('user.model'))->getTable();
+        $tableName  = resolve(cms_config('user.model'))->getTable();
         $columnName = cms_config('user.columns.avatar');
 
         if (Schema::hasColumn($tableName, $columnName)) {
