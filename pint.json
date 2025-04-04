@@ -7,7 +7,7 @@
       "syntax": "short"
     },
     "binary_operator_spaces": {
-      "default": "align_single_space"
+      "default": "single_space"
     },
     "blank_line_after_namespace": true,
     "blank_line_after_opening_tag": true,
@@ -53,13 +53,13 @@
       "closure_function_spacing": "one"
     },
     "braces": {
-      "position_after_anonymous_constructs": "next",
+      "position_after_anonymous_constructs": "same",
       "position_after_control_structures": "same",
       "position_after_functions_and_oop_constructs": "next"
     },
     "single_line_empty_body": false,
     "curly_braces_position": {
-      "anonymous_classes_opening_brace": "next_line_unless_newline_at_signature_end"
+      "anonymous_classes_opening_brace": "same_line"
     }
   }
 }
