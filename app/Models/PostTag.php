@@ -26,9 +26,9 @@ class PostTag extends Model
      * @var array
      */
     protected $casts = [
-        'id'      => 'integer',
+        'id' => 'integer',
         'post_id' => 'integer',
-        'tag_id'  => 'integer',
+        'tag_id' => 'integer',
     ];
 
     protected static function newFactory(): PostTagFactory

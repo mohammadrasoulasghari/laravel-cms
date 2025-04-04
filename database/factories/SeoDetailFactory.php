@@ -27,8 +27,8 @@ class SeoDetailFactory extends Factory
                 ->inRandomOrder()
                 ->firstOrCreate()
                 ->id,
-            'title'       => $this->faker->sentence(4),
-            'keywords'    => $keywords,
+            'title' => $this->faker->sentence(4),
+            'keywords' => $keywords,
             'description' => $this->faker->sentence(1),
         ];
     }

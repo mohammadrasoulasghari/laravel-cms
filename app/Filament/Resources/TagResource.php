@@ -61,7 +61,6 @@ class TagResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -78,7 +77,6 @@ class TagResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 
@@ -86,7 +84,7 @@ class TagResource extends Resource
     {
         return [
             'index' => ListTags::route('/'),
-            'edit'  => EditTag::route('/{record}/edit'),
+            'edit' => EditTag::route('/{record}/edit'),
         ];
     }
 }

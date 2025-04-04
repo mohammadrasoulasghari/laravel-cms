@@ -50,11 +50,11 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
-        'id'            => 'integer',
-        'published_at'  => 'datetime',
+        'id' => 'integer',
+        'published_at' => 'datetime',
         'scheduled_for' => 'datetime',
-        'status'        => PostStatus::class,
-        'user_id'       => 'integer',
+        'status' => PostStatus::class,
+        'user_id' => 'integer',
     ];
 
     protected static function newFactory(): PostFactory
@@ -210,7 +210,6 @@ class Post extends Model
                     Fieldset::make('Status')
                         ->label(trans('posts.form.status'))
                         ->schema([
-
                             ToggleButtons::make('status')
                                 ->label(trans('posts.form.status'))
                                 ->live()
@@ -234,7 +233,6 @@ class Post extends Model
                         ->relationship('user', cms_config('user.columns.name'))
                         ->nullable(false)
                         ->default(auth()->id()),
-
                 ]),
         ];
     }

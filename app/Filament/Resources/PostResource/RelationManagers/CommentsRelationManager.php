@@ -36,7 +36,6 @@ class CommentsRelationManager extends RelationManager
                     ->label(trans('comment.fields.user-name')),
             ])
             ->filters([
-                //
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

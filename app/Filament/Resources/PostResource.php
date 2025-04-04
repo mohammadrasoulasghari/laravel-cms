@@ -192,11 +192,11 @@ class PostResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index'     => ListPosts::route('/'),
-            'create'    => CreatePost::route('/create'),
-            'edit'      => EditPost::route('/{record}/edit'),
-            'view'      => ViewPost::route('/{record}'),
-            'comments'  => ManagePostComments::route('/{record}/comments'),
+            'index' => ListPosts::route('/'),
+            'create' => CreatePost::route('/create'),
+            'edit' => EditPost::route('/{record}/edit'),
+            'view' => ViewPost::route('/{record}'),
+            'comments' => ManagePostComments::route('/{record}/comments'),
             'seoDetail' => ManaePostSeoDetail::route('/{record}/seo-details'),
         ];
     }

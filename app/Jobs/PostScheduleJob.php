@@ -20,15 +20,14 @@ class PostScheduleJob implements ShouldQueue
 
     public function __construct(private Post $post)
     {
-        //
     }
 
     public function handle(): void
     {
         Log::info('PostScheduleJob Started');
         $this->post->update([
-            'status'        => PostStatus::PUBLISHED,
-            'published_at'  => now(),
+            'status' => PostStatus::PUBLISHED,
+            'published_at' => now(),
             'scheduled_for' => null,
         ]);
         Log::info('PostScheduleJob Ended');

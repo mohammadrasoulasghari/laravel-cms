@@ -70,7 +70,6 @@ class NewsletterResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -85,16 +84,15 @@ class NewsletterResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index'  => ListNewsletters::route('/'),
+            'index' => ListNewsletters::route('/'),
             'create' => CreateNewsletter::route('/create'),
-            'edit'   => EditNewsletter::route('/{record}/edit'),
+            'edit' => EditNewsletter::route('/{record}/edit'),
         ];
     }
 }

@@ -108,16 +108,15 @@ class CommentResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index'  => ListComments::route('/'),
+            'index' => ListComments::route('/'),
             'create' => CreateComment::route('/create'),
-            'edit'   => EditComment::route('/{record}/edit'),
+            'edit' => EditComment::route('/{record}/edit'),
         ];
     }
 }

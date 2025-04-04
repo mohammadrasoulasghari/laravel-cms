@@ -75,7 +75,6 @@ class SettingResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -91,16 +90,15 @@ class SettingResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index'  => ListSettings::route('/'),
+            'index' => ListSettings::route('/'),
             'create' => CreateSetting::route('/create'),
-            'edit'   => EditSetting::route('/{record}/edit'),
+            'edit' => EditSetting::route('/{record}/edit'),
         ];
     }
 }
