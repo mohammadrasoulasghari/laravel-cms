@@ -8,7 +8,7 @@ use Filament\Support\Contracts\HasLabel;
 
 enum PostStatus: string implements HasColor, HasIcon, HasLabel
 {
-    case PENDING = 'pending';
+    case PENDING   = 'pending';
     case SCHEDULED = 'scheduled';
     case PUBLISHED = 'published';
 

@@ -18,10 +18,7 @@ class PostScheduleJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public function __construct(private Post $post)
-    {
-        //
-    }
+    public function __construct(private Post $post) {}
 
     public function handle(): void
     {

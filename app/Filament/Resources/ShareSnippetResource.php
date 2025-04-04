@@ -63,7 +63,6 @@ class ShareSnippetResource extends Resource
                     ->label(trans('share-snippet.columns.active')),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -78,7 +77,6 @@ class ShareSnippetResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 

@@ -68,7 +68,6 @@ class CategoryResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

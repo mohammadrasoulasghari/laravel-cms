@@ -124,7 +124,6 @@ class ManagePostComments extends ManageRelatedRecords
                     TextEntry::make('comment'),
                     TextEntry::make('created_at'),
                     TextEntry::make('approved_at')->label('Approved At')->placeholder('Not Approved'),
-
                 ])
                 ->icon('heroicon-o-chat-bubble-left-ellipsis'),
         ]);
